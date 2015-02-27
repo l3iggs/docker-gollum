@@ -8,7 +8,7 @@ Here's a script you could use to start the wiki server with this docker image: `
 #!/bin/bash
 
 LOCAL_WIKI_DIR=~/git/wiki
-BASEPATH="/"
+#BASEPATH="/wiki"
 
 docker stop wiki
 docker rm wiki
