@@ -10,7 +10,5 @@ USER 0
 # make wiki dir
 RUN mkdir /wiki
 
-ENV BASEPATH="/"
-
 # start apache
-CMD gollum --allow-uploads --base-path ${BASEPATH} --port 80 /wiki
+CMD gollum --allow-uploads --base-path "${BASEPATH}" --port 80 /wiki
