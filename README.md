@@ -8,10 +8,9 @@ Here's a script you could use to start the wiki server with this docker image: `
 #!/bin/bash
 
 LOCAL_WIKI_DIR=~/git/wiki
-BASEPATH="wiki"
 
 docker stop wiki
 docker rm wiki
-docker run -e "BASEPATH=${BASEPATH}" --name wiki -p 80:80 -p 443:443 -d -v ${LOCAL_WIKI_DIR}:/wiki l3iggs/gollum
+docker run --name wiki -p 80:80 -p 443:443 -d -v ${LOCAL_WIKI_DIR}:/wiki l3iggs/gollum
 ```
 Then browse to http://localhost to see your wiki!
