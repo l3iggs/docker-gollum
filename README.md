@@ -3,7 +3,7 @@ dockerized gollum (git backed wiki) server
 
 ## Usage
 Let's assume you have your wiki's git repo in ~/git/wik.  
-Here's a script you could use to start the wiki server with this docker image: `runWiki.sh`
+Here's a script you could use to start the wiki server inside this docker image: `runWiki.sh`
 ```bash
 #!/bin/bash
 
