@@ -11,4 +11,4 @@ USER 0
 RUN mkdir /wiki
 
 # start apache
-CMD gollum --allow-uploads --base-path "${BASEPATH}" --port 80 /wiki
+CMD gollum --allow-uploads --port 80 /wiki
