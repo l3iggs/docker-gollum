@@ -21,8 +21,8 @@ RUN sudo chmod 600 server.key
 RUN sudo openssl req -new -key server.key -out server.csr -subj $SUBJECT
 RUN sudo openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt
 RUN sudo mkdir /https
-RUN sudo ln -s /etc/httpd/conf/server.crt /https/server.crt
-RUN sudo ln -s /etc/httpd/conf/server.key /https/server.key
+RUN sudo ln -s /root/server.crt /https/server.crt
+RUN sudo ln -s /root/server.key /https/server.key
 
 # switch to root
 USER 0
