@@ -1,6 +1,9 @@
 FROM l3iggs/archlinux-aur
 MAINTAINER l3iggs <l3iggs@live.com>
 
+# install better webserver
+RUN yaourt -S --noconfirm --needed ruby-thin
+
 # Install gollum
 RUN yaourt -S --noconfirm --needed gollum
 
