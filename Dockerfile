@@ -24,4 +24,4 @@ ENV WIKI_REPO /wiki
 
 # start gollum twice
 # once for https and once for http
-CMD thin start -d -p 80 -R /home/docker/config.ru; thin start -d --ssl -p 443 -R /home/docker/config.ru
+CMD thin start -d --ssl -p 443 -R /home/docker/config.ru; thin start -p 80 -R /home/docker/config.ru
