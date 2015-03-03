@@ -13,7 +13,11 @@ docker stop wiki
 docker rm wiki
 docker run --name wiki -p 80:80 -p 443:443 -d -v ${LOCAL_WIKI_DIR}:/wiki l3iggs/gollum
 ```
-Then browse to http://localhost to see your wiki!
+Then browse to  
+http://localhost  
+or  
+https://localhost  
+to see your wiki!
 
 Note that this example exposes the wiki both via http and https. You can expose only one of port 80 or 443 if you wish.
 
