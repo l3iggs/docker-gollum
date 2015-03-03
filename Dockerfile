@@ -7,6 +7,9 @@ ADD config.ru /home/docker/config.ru
 # install better webserver
 RUN yaourt -S --noconfirm --needed ruby-thin
 
+# install ssl forcer
+RUN yaourt -S --noconfirm --needed ruby-rack-ssl
+
 # Install gollum
 RUN yaourt -S --noconfirm --needed gollum
 
