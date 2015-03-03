@@ -22,7 +22,8 @@ RUN mkdir /wiki
 # cd to wiki dir
 WORKDIR /wiki
 
-# start gollum via thin server and rack file
-CMD thin start --ssl -p 443 -R /home/docker/config.ru
+# start gollum twice
+# once for https and once for http
+CMD thin start -d --ssl -p 443 -R /home/docker/config.ru; thin start -d -p 80 -R /home/docker/config.ru;
 
 #CMD gollum --allow-uploads --port 80 /wiki
