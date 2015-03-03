@@ -4,6 +4,9 @@ MAINTAINER l3iggs <l3iggs@live.com>
 # Install gollum
 RUN yaourt -S --noconfirm --needed gollum
 
+# for working in the image
+RUN sudo pacman -S vim
+
 # switch to root
 USER 0
 
