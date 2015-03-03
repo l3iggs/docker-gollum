@@ -19,11 +19,6 @@ USER 0
 # make wiki dir
 RUN mkdir /wiki
 
-# cd to wiki dir
-WORKDIR /wiki
-
 # start gollum twice
 # once for https and once for http
 CMD thin start -d -p 80 -R /home/docker/config.ru; thin start -d --ssl -p 443 -R /home/docker/config.ru
-
-#CMD gollum --allow-uploads --port 80 /wiki
