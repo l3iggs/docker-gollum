@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'gollum/app'
+require 'rack/ssl'
+
+#use Rack::SSL #uncomment this to force ssl
 
 gollum_path = File.expand_path(ENV['WIKI_REPO'])
 Precious::App.set(:gollum_path, gollum_path)
