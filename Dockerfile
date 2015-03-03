@@ -5,7 +5,7 @@ MAINTAINER l3iggs <l3iggs@live.com>
 RUN yaourt -S --noconfirm --needed gollum
 
 # for working in the image
-RUN sudo pacman -S vim
+RUN sudo pacman --noconfirm --needed -S vim
 
 # switch to root
 USER 0
