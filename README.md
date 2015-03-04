@@ -29,4 +29,4 @@ Assuming you have `server.crt` and `server.key` files in a directory `~/sslCert`
 You can then add `-v ~/sslCert:/https` to the docker run command line to use your properly generated ssl certificate files.
 
 **[Optional] Access the wiki via a unix socket file**  
-Insert `-v /var/run/wiki-ssl.sock:/var/run/wiki-ssl.sock` between `run` and `--name` in the docker run command. You'll now have access to your wiki via the /var/run/wiki-ssl.sock socket file on the host.
+Insert `-v /var/run/wiki-socks:/var/run/wiki-socks` between `run` and `--name` in the docker run command. You'll now have access to your wiki via the /var/run/wiki-ssl.sock socket file on the host.
