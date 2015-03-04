@@ -33,8 +33,12 @@ USER 0
 # make wiki dir
 RUN mkdir /wiki
 
-# set wiki repo variable
+# set wiki repo directory variable
 ENV WIKI_REPO /wiki
+
+# set default login 
+ENV WIKI_USER gollum
+ENV WIKI_PASS gollum
 
 # start gollum twice
 # once for https and once for http
