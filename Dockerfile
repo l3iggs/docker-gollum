@@ -33,12 +33,9 @@ USER 0
 # make wiki dir
 RUN mkdir /wiki
 
-# make directory to hold wiki sockets
-RUN mkdir /var/run/wiki-socks
-
 # set wiki repo variable
 ENV WIKI_REPO /wiki
 
 # start gollum twice
 # once for https and once for http
-CMD thin start -d --socket /var/run/wiki-socks/http.sock -R /home/docker/config.ru; thin start -d --socket /var/run/wiki-socks/https.sock --ssl --ssl-key-file /https/server.key --ssl-cert-file /https/server.crt -R /home/docker/config.ru; thin start -d --ssl --ssl-key-file /https/server.key --ssl-cert-file /https/server.crt -p 443 -R /home/docker/config.ru; thin start -p 80 -R /home/docker/config.ru
+CMD thin start -d --ssl --ssl-key-file /https/server.key --ssl-cert-file /https/server.crt -p 443 -R /home/docker/config.ru; thin start -p 80 -R /home/docker/config.ru
