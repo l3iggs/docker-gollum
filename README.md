@@ -15,6 +15,7 @@ docker stop wiki
 docker rm wiki
 docker run --name wiki -p 80:80 -p 443:443 -d -v ${LOCAL_WIKI_DIR}:/wiki l3iggs/gollum
 ```
+
 Then browse to  
 http://localhost  
 or  
